@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <title>Formulario de Incidencias - Cliente</title>
+</head>
+<body>
+    <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+        <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Ayúdanos a mejorar <span class="text-[#FF0000]">...</span></h1>
+            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Valoramos tu opinión, ya que nos ayuda a resolver los problemas y mejorar nuestro servicio.</p>
+        </div>
+    </section>
+
+    <main class="p-6 space-y-6 max-w-5xl mx-auto">
+        <h1>Detalles del Incidente (Cliente)</h1>
+
+        <form class="max-w-sm mx-auto">
+            <div class="mb-5">
+                <label for="fecha-incidente-cliente" class="block mb-2 text-sm font-medium text-gray-900">Fecha del Incidente</label>
+                <input type="date" id="fecha-incidente-cliente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@flowbite.com" required />
+            </div>
+            <div class="mb-5">
+                <label for="fecha-incidente-cliente" class="block mb-2 text-sm font-medium text-gray-900">Tipo de Documento</label>
+                <div class="flex">
+                    <div class="flex items-center me-4">
+                        <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                        <label for="inline-radio" class="ms-2 text-sm font-medium text-gray-900">DNI</label>
+                    </div>
+                    <div class="flex items-center me-4">
+                        <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                        <label for="inline-2-radio" class="ms-2 text-sm font-medium text-gray-900">Carnét</label>
+                    </div>
+                    <div class="flex items-center me-4">
+                        <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                        <label for="inline-2-radio" class="ms-2 text-sm font-medium text-gray-900">Pasaporte</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5">
+                <label for="num-documento-cliente" class="block mb-2 text-sm font-medium text-gray-900">Número de documento</label>
+                <input type="number" id="num-documento-cliente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+            </div>
+            <div class="mb-5">
+                <label for="sucursales" class="block mb-2 text-sm font-medium text-gray-900">Sucursal por Reportar</label>
+                <select id="sucursales" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected>Seleccionar Sucursal---</option>
+                    <option value="sucursal1">Sucursal 1</option>
+                    <option value="sucursal2">Sucursal 2</option>
+                </select>
+            </div>
+            <div class="mb-5">
+                <label for="areas" class="block mb-2 text-sm font-medium text-gray-900">Área por Reportar</label>
+                <select id="areas" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected disabled>Seleccionar Área---</option>
+                    <option value="area1">Área 1</option>
+                    <option value="area2">Área 2</option>
+                </select>
+            </div>
+            <div class="mb-5">
+                <label for="empleado" class="block mb-2 text-sm font-medium text-gray-900">Empleado Reportado</label>
+                <select id="empleado" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected disabled>Seleccionar Empleado---</option>
+                    <option value="empleado1">Área 1</option>
+                    <option value="empleado2">Área 2</option>
+                </select>
+            </div>
+            <div class="mb-5">
+                <label for="tipo-incidencia" class="block mb-2 text-sm font-medium text-gray-900">Tipo de Incidencia</label>
+                <select id="tipo-incidencia" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected disabled>Seleccionar Tipo---</option>
+                    <option value="tipo1">Tipo 1</option>
+                    <option value="tipo2">Tipo 2</option>
+                </select>
+            </div>
+            <div class="mb-5">
+                <label for="descripcion" class="block mb-2 text-sm font-medium text-gray-900">Descripción del Incidente</label>
+                <textarea id="descripcion" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 resize-none"></textarea>
+            </div>
+            <div class="mb-5">
+                <label for="evidencia" class="block mb-2 text-sm font-medium text-gray-900">Evidencia</label>
+                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" aria-describedby="user_avatar_help" id="evidencia" type="file">
+            </div>
+
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Enviar</button>
+        </form>
+
+    </main>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>
