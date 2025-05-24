@@ -15,8 +15,8 @@
     <main class="font-[Poppins]">
         <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
             <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-                <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Ayúdanos a mejorar <span class="text-[#FF0000]">...</span></h1>
-                <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Valoramos tu opinión, ya que nos ayuda a resolver los problemas y mejorar nuestro servicio.</p>
+                <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Ayúdanos a mejorar <span class="text-[#FF0000]">...</span></h1>
+                <p class="mb-8 text-lg font-normal text-[#949BA6] lg:text-xl sm:px-16 lg:px-48">Valoramos tu opinión, ya que nos ayuda a resolver los problemas y mejorar nuestro servicio.</p>
             </div>
         </section>
     
@@ -29,19 +29,19 @@
                     <input type="date" id="fecha-incidente-cliente" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@flowbite.com" required />
                 </div>
                 <div class="mb-5">
-                    <label for="fecha-incidente-cliente" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Documento</label>
+                    <label for="tipo-doc-cliente" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Documento</label>
                     <div class="flex">
                         <div class="flex items-center me-4">
                             <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-radio" class="ms-2 text-sm font-medium text-[#0F2343]">DNI</label>
+                            <label for="inline-radio" class="ms-2 text-sm font-medium text-[#949BA6]">DNI</label>
                         </div>
                         <div class="flex items-center me-4">
                             <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#0F2343]">Carnét</label>
+                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Carnét</label>
                         </div>
                         <div class="flex items-center me-4">
                             <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#0F2343]">Pasaporte</label>
+                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Pasaporte</label>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="mb-5">
                     <label for="sucursales" class="block mb-2 text-sm font-medium text-[#0F2343]">Sucursal por Reportar</label>
                     <select id="sucursales" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                        <option selected>Seleccionar Sucursal---</option>
+                        <option selected disabled>Seleccionar Sucursal---</option>
                         <option value="sucursal1">Sucursal 1</option>
                         <option value="sucursal2">Sucursal 2</option>
                     </select>
