@@ -13,35 +13,36 @@
 </head>
 <body>
     <main class="font-[Poppins]">
-        <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+        <section class="bg-center bg-no-repeat bg-[url('https://drive.google.com/uc?export=view&id=1-Dd2szy4jRWxpEjO3xFttcPL2Yugw_u4')] bg-gray-700 bg-blend-multiply">
             <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                <img src="https://cdn-icons-png.flaticon.com/512/4287/4287284.png" alt="SaTanca" class="w-[25%] max-w-[200px] h-auto mx-auto block"> <br>
                 <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Ayúdanos a mejorar <span class="text-[#FF0000]">...</span></h1>
                 <p class="mb-8 text-lg font-normal text-[#949BA6] lg:text-xl sm:px-16 lg:px-48">Valoramos tu opinión, ya que nos ayuda a resolver los problemas y mejorar nuestro servicio.</p>
             </div>
         </section>
     
-        <section class="p-6 space-y-6 max-w-5xl mx-auto text-[#0F2343]">
+        <section class="relative z-10 -mt-10 p-6 space-y-6 max-w-5xl mx-auto bg-white text-[#0F2343] rounded-t-2xl shadow-lg">
             <h1 class="text-xl font-bold">Detalles del Incidente (Cliente)</h1>
     
-            <form class="max-w-sm mx-auto">
+            <form class="max-w-3xl mx-auto">
                 <div class="mb-5">
                     <label for="fecha-incidente-cliente" class="block mb-2 text-sm font-medium text-[#0F2343]">Fecha del Incidente</label>
-                    <input type="date" id="fecha-incidente-cliente" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@flowbite.com" required />
+                    <input type="date" id="fecha-incidente-cliente" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
                 </div>
                 <div class="mb-5">
                     <label for="tipo-doc-cliente" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Documento</label>
                     <div class="flex">
                         <div class="flex items-center me-4">
-                            <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-radio" class="ms-2 text-sm font-medium text-[#949BA6]">DNI</label>
+                            <input id="dni-radio" type="radio" value="dni" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="dni-radio" class="ms-2 text-sm font-medium text-[#949BA6]">DNI</label>
                         </div>
                         <div class="flex items-center me-4">
-                            <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Carnét</label>
+                            <input id="carne-radio" type="radio" value="carne" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="carne-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Carnét</label>
                         </div>
                         <div class="flex items-center me-4">
-                            <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Pasaporte</label>
+                            <input id="pasaporte-radio" type="radio" value="pasaporte" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="pasaporte-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Pasaporte</label>
                         </div>
                     </div>
                 </div>
@@ -69,8 +70,8 @@
                     <label for="empleado" class="block mb-2 text-sm font-medium text-[#0F2343]">Empleado Reportado</label>
                     <select id="empleado" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                         <option selected disabled>Seleccionar Empleado---</option>
-                        <option value="empleado1">Área 1</option>
-                        <option value="empleado2">Área 2</option>
+                        <option value="empleado1">Empleado 1</option>
+                        <option value="empleado2">Empleado 2</option>
                     </select>
                 </div>
                 <div class="mb-5">

@@ -23,34 +23,34 @@
             </div>
         </section>
         
-        <section class="p-6 space-y-6 max-w-5xl mx-auto text-[#0F2343]">
+        <section class="relative z-10 -mt-10 p-6 space-y-6 max-w-5xl mx-auto bg-white text-[#0F2343] rounded-t-2xl shadow-lg">
             <div class="flex justify-between py-2">
                 <div class="flex-grow">
-                    <label for="">Fecha</label> <br>
+                    <label for="" class="block mb-2 text-sm font-medium text-[#0F2343]">Fecha</label>
                     <span class="text-sm font-medium text-[#949BA6]">domingo, 06 de abril de 2025</span>
                 </div>
                 <div class="flex-grow text-right">
-                    <label for="">Hora</label> <br>
+                    <label for="" class="block mb-2 text-sm font-medium text-[#0F2343]">Hora</label>
                     <span class="text-sm font-medium text-[#949BA6]">08:00:00</span>
                 </div>
             </div>
             <hr>
-            <form class="max-w-sm mx-auto">
+            <form class="max-w-3xl mx-auto">
                 <!-- Tipo de Documento -->
                 <div class="mb-5">
                     <label for="tipo-doc-empleado-asistencia" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Documento</label>
                     <div class="flex">
                         <div class="flex items-center me-4">
-                            <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-radio" class="ms-2 text-sm font-medium text-[#949BA6]">DNI</label>
+                            <input id="dni-radio" type="radio" value="dni" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="dni-radio" class="ms-2 text-sm font-medium text-[#949BA6]">DNI</label>
                         </div>
                         <div class="flex items-center me-4">
-                            <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Carnét</label>
+                            <input id="carne-radio" type="radio" value="carne" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="carne-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Carnét</label>
                         </div>
                         <div class="flex items-center me-4">
-                            <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Pasaporte</label>
+                            <input id="pasaporte-radio" type="radio" value="pasaporte" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="pasaporte-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Pasaporte</label>
                         </div>
                     </div>
                 </div>
@@ -60,6 +60,7 @@
                     <input type="number" id="num-documento-asistencia" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
                 </div>
                 <!-- Botón de Envío -->
+                <br><br><br><br><br><br>
                 <button type="submit" class="text-white bg-[#0F2343] hover:bg-[#364153] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Marcar Asistencia</button>
             </form>
         </section>
