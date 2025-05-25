@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Flatpickr para el datepicker múltiple -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Plantilla Encuestas</title>
+</head>
+<body>
+    <main class="font-[Poppins]">
+        <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+            <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                <img src="https://cdn-icons-png.flaticon.com/512/4287/4287284.png" alt="SaTanca" class="w-[25%] max-w-[200px] h-auto mx-auto block"> <br>
+                <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Encuesta de ...</h1>
+                <p class="mb-8 text-lg font-normal text-[#949BA6] lg:text-xl sm:px-16 lg:px-48">Agradecemos su participación. Sus respuestas nos ayudarán a tomar mejores decisiones.   </p>
+            </div>
+        </section>
+        
+        <section class="p-6 space-y-6 max-w-5xl mx-auto text-[#0F2343]">
+            <h1 class="text-xl font-bold">Detalles de la Encuesta</h1>
+            <form class="max-w-sm mx-auto">
+                <!-- Ejemplo de Pregunta "Si o No" -->
+                <div class="mb-5">
+                    <label for="pregunta-si-no" class="block mb-2 text-sm font-medium text-[#0F2343]">¿Pregunta 1?</label>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2">
+                            <label for="default-radio-1" class="ms-2 text-sm font-medium text-[#0F2343]">Sí</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2">
+                            <label for="default-radio-2" class="ms-2 text-sm font-medium text-[#0F2343]">No</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ejemplo de Pregunta "1 al 5 estrellas" -->
+                <div class="mb-5">
+                    <label for="pregunta-estrellas" class="block mb-2 text-sm font-medium text-[#0F2343]">¿Pregunta 2?</label>
+                    
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
