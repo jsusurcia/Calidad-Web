@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Registrar Justificación</title>
+</head>
+<body>
+    <main class="font-[Poppins]">
+        <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+            <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                <img src="https://cdn-icons-png.flaticon.com/512/4287/4287284.png" alt="SaTanca" class="w-[25%] max-w-[200px] h-auto mx-auto block"> <br>
+                <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Registra tu justificación <span class="text-[#FF0000]">...</span></h1>
+                <p class="mb-8 text-lg font-normal text-[#949BA6] lg:text-xl sm:px-16 lg:px-48">Por favor, completa los detalles de tu justificación para que podamos gestionar tu tiempo de trabajo.</p>
+            </div>
+        </section>  
+        
+        <section class="p-6 space-y-6 max-w-5xl mx-auto text-[#0F2343]">
+            <h1 class="text-xl font-bold">Detalles de la Justificación</h1>
+    
+            <form class="max-w-sm mx-auto">
+                <!-- Tipo de Documento -->
+                <div class="mb-5">
+                    <label for="tipo-doc-empleado-justificado" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Documento</label>
+                    <div class="flex">
+                        <div class="flex items-center me-4">
+                            <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="inline-radio" class="ms-2 text-sm font-medium text-[#949BA6]">DNI</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Carnét</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Pasaporte</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Número de Documento -->
+                <div class="mb-5">
+                    <label for="num-documento-empleado-justificado" class="block mb-2 text-sm font-medium text-[#0F2343]">Número de documento</label>
+                    <input type="number" id="num-documento-empleado" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+                </div>
+                <!-- Tipo de Evento (Tardanza, Inasistencia) -->
+                <div class="mb-5">
+                    <label for="hosting" class="block mb-2 text-sm font-medium text-[#0F2343]">Seleccione una opción</label>
+                    <ul class="grid w-full gap-6 md:grid-cols-2">
+                        <li>
+                            <input type="radio" id="tardanza" name="opcion" value="tardanza" class="hidden peer" required />
+                            <label for="tardanza" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100">
+                                <div class="block">
+                                    <div class="w-full">Tardanza</div>
+                                </div>
+                                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="justificacion" name="opcion" value="justificacion" class="hidden peer" required />
+                            <label for="justificacion" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100">
+                                <div class="block">
+                                    <div class="w-full">Justificación</div>
+                                </div>
+                                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Tipo de Justificación -->
+                <div class="mb-5">
+                    <label for="tipo-justificacion" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Justificación</label>
+                    <select id="tipo-justificacion" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                        <option selected disabled>Seleccionar Tipo---</option>
+                        <option value="sucursal1">Tipo 1</option>
+                        <option value="sucursal2">Tipo 2</option>
+                    </select>
+                </div>
+                <!-- Fechas a Justificar -->
+                <div class="mb-5">
+                    <label for="fechas-justificar" class="block mb-2 text-sm font-medium text-[#0F2343]">Fechas a Justificar</label>
+                    <div class="relative max-w-sm">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                            </svg>
+                        </div>
+                        <input id="datepicker-format" name="fechaSeleccionada" datepicker datepicker-min-date="06/04/2024" datepicker-max-date="05/05/2025" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Seleccionar Fechas---" required>
+                    </div>
+                </div>
+
+                <!-- Detalles Escritos -->
+                <div class="mb-5">
+                    <label for="detalles" class="block mb-2 text-sm font-medium text-[#0F2343]">Detalles Escritos</label>
+                    <textarea id="detalles" rows="4" class="block p-2.5 w-full text-sm text-[#0F2343] bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 resize-none"></textarea>
+                </div>
+                <!-- Evidencias Fotográficas -->
+                <div class="mb-5">
+                    <label for="evidencia" class="block mb-2 text-sm font-medium text-[#0F2343]">Evidencia</label>
+                    <input class="block w-full text-sm text-[#0F2343] border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" aria-describedby="user_avatar_help" id="evidencia" type="file">
+                </div>
+    
+                <button type="submit" class="text-white bg-[#0F2343] hover:bg-[#364153] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Flowbite JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    </main>
+</body>
+</html>
