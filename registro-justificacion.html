@@ -7,6 +7,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Flatpickr para el datepicker múltiple -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
     <!-- Google Fonts Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Registrar Justificación</title>
@@ -87,15 +91,36 @@
                 </div>
                 <!-- Fechas a Justificar -->
                 <div class="mb-5">
-                    <label for="fechas-justificar" class="block mb-2 text-sm font-medium text-[#0F2343]">Fechas a Justificar</label>
+                    <label for="fechas-justificar-input" class="block mb-2 text-sm font-medium text-[#0F2343]">Fechas a Justificar</label>
                     <div class="relative max-w-sm">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                             </svg>
                         </div>
-                        <input id="datepicker-format" name="fechaSeleccionada" datepicker datepicker-min-date="06/04/2024" datepicker-max-date="05/05/2025" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Seleccionar Fechas---" required>
+                        <input 
+                            id="fechas-justificar-input" 
+                            name="fechaSelector" 
+                            type="text" 
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" 
+                            placeholder="Seleccionar Fechas---" 
+                            readonly
+                            required>
                     </div>
+                    
+                    <!-- Container para las fechas seleccionadas -->
+                    <div id="fechas-seleccionadas-container" class="mt-3 min-h-[40px]">
+                        <div id="fechas-seleccionadas-list" class="flex flex-wrap gap-2">
+                            <!-- Las fechas aparecerán aquí dinámicamente -->
+                        </div>
+                    </div>
+                    
+                    <!-- Input hidden para enviar al backend -->
+                    <input 
+                        type="hidden" 
+                        id="fechas-justificar-hidden" 
+                        name="fechasJustificar" 
+                        value="">
                 </div>
 
                 <!-- Detalles Escritos -->
@@ -115,7 +140,7 @@
 
         <!-- Flowbite JS -->
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+        <script src="js/script-fechas.js"></script>
     </main>
 </body>
 </html>

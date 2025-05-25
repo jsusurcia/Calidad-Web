@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Flatpickr para el datepicker múltiple -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Registrar Justificación</title>
+</head>
+<body>
+    <main class="font-[Poppins]">
+        <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+            <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                <img src="https://cdn-icons-png.flaticon.com/512/4287/4287284.png" alt="SaTanca" class="w-[25%] max-w-[200px] h-auto mx-auto block"> <br>
+                <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Registra tu justificación <span class="text-[#FF0000]">...</span></h1>
+                <p class="mb-8 text-lg font-normal text-[#949BA6] lg:text-xl sm:px-16 lg:px-48">Por favor, completa los detalles de tu justificación para que podamos gestionar tu tiempo de trabajo.</p>
+            </div>
+        </section>  
+        
+        <section class="p-6 space-y-6 max-w-5xl mx-auto text-[#0F2343]">
+            <h1 class="text-xl font-bold">Detalles de la Justificación</h1>
+    
+            <form class="max-w-sm mx-auto" id="formulario-justificacion">
+                <!-- Tipo de Documento -->
+                <div class="mb-5">
+                    <label for="tipo-doc-empleado-justificado" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Documento</label>
+                    <div class="flex">
+                        <div class="flex items-center me-4">
+                            <input id="tipo-doc-dni" type="radio" value="DNI" name="tipoDocumento" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="tipo-doc-dni" class="ms-2 text-sm font-medium text-[#949BA6]">DNI</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="tipo-doc-carnet" type="radio" value="CARNET" name="tipoDocumento" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="tipo-doc-carnet" class="ms-2 text-sm font-medium text-[#949BA6]">Carnét</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="tipo-doc-pasaporte" type="radio" value="PASAPORTE" name="tipoDocumento" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="tipo-doc-pasaporte" class="ms-2 text-sm font-medium text-[#949BA6]">Pasaporte</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Número de Documento -->
+                <div class="mb-5">
+                    <label for="num-documento-empleado-justificado" class="block mb-2 text-sm font-medium text-[#0F2343]">Número de documento</label>
+                    <input type="number" id="num-documento-empleado-justificado" name="numeroDocumento" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+                </div>
+                <!-- Tipo de Evento (Tardanza, Inasistencia) -->
+                <div class="mb-5">
+                    <label for="hosting" class="block mb-2 text-sm font-medium text-[#0F2343]">Seleccione una opción</label>
+                    <ul class="grid w-full gap-6 md:grid-cols-2">
+                        <li>
+                            <input type="radio" id="tardanza" name="tipoEvento" value="tardanza" class="hidden peer" required />
+                            <label for="tardanza" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100">
+                                <div class="block">
+                                    <div class="w-full">Tardanza</div>
+                                </div>
+                                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="justificacion" name="tipoEvento" value="justificacion" class="hidden peer" required />
+                            <label for="justificacion" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100">
+                                <div class="block">
+                                    <div class="w-full">Justificación</div>
+                                </div>
+                                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Tipo de Justificación -->
+                <div class="mb-5">
+                    <label for="tipo-justificacion" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Justificación</label>
+                    <select id="tipo-justificacion" name="tipoJustificacion" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                        <option selected disabled>Seleccionar Tipo---</option>
+                        <option value="tipo1">Tipo 1</option>
+                        <option value="tipo2">Tipo 2</option>
+                    </select>
+                </div>
+                
+                <!-- ========== FECHAS A JUSTIFICAR - SECCIÓN MODIFICADA ========== -->
+                <div class="mb-5">
+                    <label for="fechas-justificar-input" class="block mb-2 text-sm font-medium text-[#0F2343]">Fechas a Justificar</label>
+                    
+                    <!-- Input del datepicker -->
+                    <div class="relative max-w-sm">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                            </svg>
+                        </div>
+                        <input 
+                            id="fechas-justificar-input" 
+                            name="fechaSelector" 
+                            type="text" 
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" 
+                            placeholder="Seleccionar Fechas---" 
+                            readonly
+                            required>
+                    </div>
+                    
+                    <!-- Container para las fechas seleccionadas -->
+                    <div id="fechas-seleccionadas-container" class="mt-3 min-h-[40px]">
+                        <div id="fechas-seleccionadas-list" class="flex flex-wrap gap-2">
+                            <!-- Las fechas aparecerán aquí dinámicamente -->
+                        </div>
+                    </div>
+                    
+                    <!-- Input hidden para enviar al backend -->
+                    <input 
+                        type="hidden" 
+                        id="fechas-justificar-hidden" 
+                        name="fechasJustificar" 
+                        value="">
+                </div>
+                <!-- ========== FIN SECCIÓN MODIFICADA ========== -->
+
+                <!-- Detalles Escritos -->
+                <div class="mb-5">
+                    <label for="detalles" class="block mb-2 text-sm font-medium text-[#0F2343]">Detalles Escritos</label>
+                    <textarea id="detalles" name="detallesEscritos" rows="4" class="block p-2.5 w-full text-sm text-[#0F2343] bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 resize-none" placeholder="Describe los detalles de tu justificación..."></textarea>
+                </div>
+                <!-- Evidencias Fotográficas -->
+                <div class="mb-5">
+                    <label for="evidencia" class="block mb-2 text-sm font-medium text-[#0F2343]">Evidencia</label>
+                    <input class="block w-full text-sm text-[#0F2343] border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" aria-describedby="user_avatar_help" id="evidencia" name="evidenciaFotografica" type="file" accept="image/*,application/pdf">
+                </div>
+    
+                <button type="submit" class="text-white bg-[#0F2343] hover:bg-[#364153] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Enviar</button>
+            </form>
+            
+            <!-- Panel de información para desarrollo (opcional - remover en producción) -->
+            <div id="info-desarrollo" class="mt-8 p-4 bg-gray-50 rounded-lg border-2 border-dashed border-gray-300">
+                <h3 class="text-sm font-semibold text-gray-700 mb-2">📋 Información para el Backend:</h3>
+                <button type="button" onclick="mostrarDatosFormulario()" class="mb-3 px-3 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700">
+                    Ver Datos del Formulario
+                </button>
+                <pre id="datos-formulario" class="text-xs text-gray-600 whitespace-pre-wrap hidden"></pre>
+            </div>
+        </section>
+
+        <!-- Scripts -->
+        <!-- Flowbite JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+        
+        <!-- Script para funcionalidad de fechas múltiples -->
+        <script>
+            // Array para almacenar las fechas seleccionadas
+            let fechasSeleccionadas = [];
+            
+            // Configuración del datepicker con Flatpickr
+            const fp = flatpickr("#fechas-justificar-input", {
+                mode: "single", // Modo single para seleccionar una fecha a la vez
+                dateFormat: "d/m/Y",
+                minDate: "06/04/2024",
+                maxDate: "05/05/2025",
+                locale: "es",
+                allowInput: false,
+                clickOpens: true,
+                onChange: function(selectedDates, dateStr, instance) {
+                    if (selectedDates.length > 0) {
+                        agregarFecha(dateStr);
+                        // Limpiar el input después de seleccionar
+                        instance.clear();
+                    }
+                }
+            });
+            
+            // Función para agregar una fecha
+            function agregarFecha(fechaStr) {
+                // Verificar si la fecha ya está seleccionada
+                if (!fechasSeleccionadas.includes(fechaStr)) {
+                    fechasSeleccionadas.push(fechaStr);
+                    actualizarDisplayFechas();
+                    actualizarInputHidden();
+                    actualizarValidacionFormulario();
+                }
+            }
+            
+            // Función para eliminar una fecha
+            function eliminarFecha(fechaStr) {
+                const index = fechasSeleccionadas.indexOf(fechaStr);
+                if (index > -1) {
+                    fechasSeleccionadas.splice(index, 1);
+                    actualizarDisplayFechas();
+                    actualizarInputHidden();
+                    actualizarValidacionFormulario();
+                }
+            }
+            
+            // Función para actualizar la visualización de fechas
+            function actualizarDisplayFechas() {
+                const container = document.getElementById('fechas-seleccionadas-list');
+                container.innerHTML = '';
+                
+                fechasSeleccionadas.forEach(fecha => {
+                    const fechaTag = document.createElement('div');
+                    fechaTag.className = 'inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 border border-blue-200';
+                    fechaTag.innerHTML = `
+                        <span class="mr-2">${fecha}</span>
+                        <button 
+                            type="button" 
+                            onclick="eliminarFecha('${fecha}')" 
+                            class="ml-1 text-blue-600 hover:text-blue-800 focus:outline-none"
+                            aria-label="Eliminar fecha ${fecha}">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    `;
+                    container.appendChild(fechaTag);
+                });
+                
+                // Mostrar mensaje si no hay fechas seleccionadas
+                if (fechasSeleccionadas.length === 0) {
+                    const mensajeVacio = document.createElement('div');
+                    mensajeVacio.className = 'text-gray-500 text-sm italic';
+                    mensajeVacio.textContent = 'No hay fechas seleccionadas';
+                    container.appendChild(mensajeVacio);
+                }
+            }
+            
+            // Función para actualizar el input hidden
+            function actualizarInputHidden() {
+                const hiddenInput = document.getElementById('fechas-justificar-hidden');
+                hiddenInput.value = fechasSeleccionadas.join(',');
+            }
+            
+            // Función para actualizar la validación del formulario
+            function actualizarValidacionFormulario() {
+                const inputVisible = document.getElementById('fechas-justificar-input');
+                if (fechasSeleccionadas.length > 0) {
+                    inputVisible.removeAttribute('required');
+                    inputVisible.setCustomValidity('');
+                } else {
+                    inputVisible.setAttribute('required', 'required');
+                    inputVisible.setCustomValidity('Debe seleccionar al menos una fecha');
+                }
+            }
+            
+            // Función para mostrar todos los datos del formulario (para desarrollo)
+            function mostrarDatosFormulario() {
+                const form = document.getElementById('formulario-justificacion');
+                const formData = new FormData(form);
+                
+                const datos = {
+                    tipoDocumento: formData.get('tipoDocumento'),
+                    numeroDocumento: formData.get('numeroDocumento'),
+                    tipoEvento: formData.get('tipoEvento'),
+                    tipoJustificacion: formData.get('tipoJustificacion'),
+                    fechaSelector: formData.get('fechaSelector'),
+                    fechasJustificar: formData.get('fechasJustificar'),
+                    fechasArray: fechasSeleccionadas,
+                    totalFechas: fechasSeleccionadas.length,
+                    detallesEscritos: formData.get('detallesEscritos'),
+                    evidenciaFotografica: formData.get('evidenciaFotografica')?.name || 'Sin archivo'
+                };
+                
+                const datosDiv = document.getElementById('datos-formulario');
+                datosDiv.textContent = JSON.stringify(datos, null, 2);
+                datosDiv.classList.toggle('hidden');
+            }
+            
+            // Manejar el envío del formulario
+            document.getElementById('formulario-justificacion').addEventListener('submit', function(e) {
+                // Validar que haya al menos una fecha seleccionada
+                if (fechasSeleccionadas.length === 0) {
+                    e.preventDefault();
+                    alert('Por favor, selecciona al menos una fecha para justificar.');
+                    return false;
+                }
+                
+                // Aquí puedes agregar más validaciones o el envío al backend
+                console.log('Formulario enviado con éxito');
+                console.log('Fechas seleccionadas:', fechasSeleccionadas);
+                
+                // Para desarrollo: mostrar datos antes de enviar (remover en producción)
+                // e.preventDefault();
+                // mostrarDatosFormulario();
+            });
+            
+            // Inicializar la vista
+            actualizarDisplayFechas();
+            actualizarValidacionFormulario();
+        </script>
+    </main>
+</body>
+</html>
