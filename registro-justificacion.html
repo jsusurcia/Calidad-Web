@@ -17,7 +17,7 @@
 </head>
 <body>
     <main class="font-[Poppins]">
-        <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+        <section class="bg-center bg-no-repeat bg-[url('https://drive.google.com/uc?export=view&id=1-Dd2szy4jRWxpEjO3xFttcPL2Yugw_u4')] bg-gray-700 bg-blend-multiply">
             <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
                 <img src="https://cdn-icons-png.flaticon.com/512/4287/4287284.png" alt="SaTanca" class="w-[25%] max-w-[200px] h-auto mx-auto block"> <br>
                 <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Registra tu justificación <span class="text-[#FF0000]">...</span></h1>
@@ -25,39 +25,39 @@
             </div>
         </section>  
         
-        <section class="p-6 space-y-6 max-w-5xl mx-auto text-[#0F2343]">
+        <section class="relative z-10 -mt-10 p-6 space-y-6 max-w-5xl mx-auto bg-white text-[#0F2343] rounded-t-2xl shadow-lg">
             <h1 class="text-xl font-bold">Detalles de la Justificación</h1>
     
-            <form class="max-w-sm mx-auto">
+            <form class="max-w-3xl mx-auto">
                 <!-- Tipo de Documento -->
                 <div class="mb-5">
                     <label for="tipo-doc-empleado-justificado" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Documento</label>
                     <div class="flex">
                         <div class="flex items-center me-4">
-                            <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-radio" class="ms-2 text-sm font-medium text-[#949BA6]">DNI</label>
+                            <input id="dni-radio" type="radio" value="dni" name="tipo-documento" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="dni-radio" class="ms-2 text-sm font-medium text-[#949BA6]">DNI</label>
                         </div>
                         <div class="flex items-center me-4">
-                            <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Carnét</label>
+                            <input id="carne-radio" type="radio" value="carne" name="tipo-documento" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="carne-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Carnét</label>
                         </div>
                         <div class="flex items-center me-4">
-                            <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
-                            <label for="inline-2-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Pasaporte</label>
+                            <input id="pasaporte-radio" type="radio" value="pasaporte" name="tipo-documento" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <label for="pasaporte-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Pasaporte</label>
                         </div>
                     </div>
                 </div>
                 <!-- Número de Documento -->
                 <div class="mb-5">
-                    <label for="num-documento-empleado-justificado" class="block mb-2 text-sm font-medium text-[#0F2343]">Número de documento</label>
+                    <label for="num-documento-empleado" class="block mb-2 text-sm font-medium text-[#0F2343]">Número de documento</label>
                     <input type="number" id="num-documento-empleado" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
                 </div>
                 <!-- Tipo de Evento (Tardanza, Inasistencia) -->
                 <div class="mb-5">
-                    <label for="hosting" class="block mb-2 text-sm font-medium text-[#0F2343]">Seleccione una opción</label>
+                    <label for="evento" class="block mb-2 text-sm font-medium text-[#0F2343]">Seleccione una opción</label>
                     <ul class="grid w-full gap-6 md:grid-cols-2">
                         <li>
-                            <input type="radio" id="tardanza" name="opcion" value="tardanza" class="hidden peer" required />
+                            <input type="radio" id="tardanza" name="tipo-evento" value="tardanza" class="hidden peer" required />
                             <label for="tardanza" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100">
                                 <div class="block">
                                     <div class="w-full">Tardanza</div>
@@ -68,7 +68,7 @@
                             </label>
                         </li>
                         <li>
-                            <input type="radio" id="justificacion" name="opcion" value="justificacion" class="hidden peer" required />
+                            <input type="radio" id="justificacion" name="tipo-evento" value="justificacion" class="hidden peer" required />
                             <label for="justificacion" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100">
                                 <div class="block">
                                     <div class="w-full">Justificación</div>
@@ -122,7 +122,6 @@
                         name="fechasJustificar" 
                         value="">
                 </div>
-
                 <!-- Detalles Escritos -->
                 <div class="mb-5">
                     <label for="detalles" class="block mb-2 text-sm font-medium text-[#0F2343]">Detalles Escritos</label>
