@@ -29,10 +29,12 @@
             <h1 class="text-xl font-bold">Detalles del Incidente (Cliente)</h1>
     
             <form class="max-w-3xl mx-auto">
+                <!-- Fecha de Incidente (Actual) -->
                 <div class="mb-5">
                     <label for="fecha-incidente-cliente" class="block mb-2 text-sm font-medium text-[#0F2343]">Fecha del Incidente</label>
-                    <input type="date" id="fecha-incidente-cliente" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+                    <input type="date" id="fecha-incidente-cliente" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" value="2025-05-25" disabled required />
                 </div>
+                <!-- Tipo de Documento -->
                 <div class="mb-5">
                     <label for="tipo-doc-cliente" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Documento</label>
                     <div class="flex">
@@ -50,10 +52,12 @@
                         </div>
                     </div>
                 </div>
+                <!-- Numero de Documento -->
                 <div class="mb-5">
                     <label for="num-documento-cliente" class="block mb-2 text-sm font-medium text-[#0F2343]">Número de documento</label>
                     <input type="number" id="num-documento-cliente" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
                 </div>
+                <!-- Sucursal del Reportado -->
                 <div class="mb-5">
                     <label for="sucursales" class="block mb-2 text-sm font-medium text-[#0F2343]">Sucursal por Reportar</label>
                     <select id="sucursales" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
@@ -62,6 +66,7 @@
                         <option value="sucursal2">Sucursal 2</option>
                     </select>
                 </div>
+                <!-- Area del Reportado -->
                 <div class="mb-5">
                     <label for="areas" class="block mb-2 text-sm font-medium text-[#0F2343]">Área por Reportar</label>
                     <select id="areas" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
@@ -70,6 +75,7 @@
                         <option value="area2">Área 2</option>
                     </select>
                 </div>
+                <!-- Empleado Reportado -->
                 <div class="mb-5">
                     <label for="empleado" class="block mb-2 text-sm font-medium text-[#0F2343]">Empleado Reportado</label>
                     <select id="empleado" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
@@ -78,6 +84,7 @@
                         <option value="empleado2">Empleado 2</option>
                     </select>
                 </div>
+                <!-- Tipo de Incidencia (real acoso) -->
                 <div class="mb-5">
                     <label for="tipo-incidencia" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Incidencia</label>
                     <select id="tipo-incidencia" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
@@ -86,10 +93,12 @@
                         <option value="tipo2">Tipo 2</option>
                     </select>
                 </div>
+                <!-- Descripción (puede ser nulo) -->
                 <div class="mb-5">
                     <label for="descripcion" class="block mb-2 text-sm font-medium text-[#0F2343]">Descripción del Incidente</label>
                     <textarea id="descripcion" rows="4" class="block p-2.5 w-full text-sm text-[#0F2343] bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 resize-none"></textarea>
                 </div>
+                <!-- Evidencias fotograficas -->
                 <div class="mb-5">
                     <label for="evidencia" class="block mb-2 text-sm font-medium text-[#0F2343]">Evidencia</label>
                     <input class="block w-full text-sm text-[#0F2343] border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" aria-describedby="user_avatar_help" id="evidencia" type="file">
