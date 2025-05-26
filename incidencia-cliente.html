@@ -39,15 +39,15 @@
                     <label for="tipo-doc-cliente" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Documento</label>
                     <div class="flex">
                         <div class="flex items-center me-4">
-                            <input id="dni-radio" type="radio" value="dni" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <input id="dni-radio" type="radio" value="dni" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500" required>
                             <label for="dni-radio" class="ms-2 text-sm font-medium text-[#949BA6]">DNI</label>
                         </div>
                         <div class="flex items-center me-4">
-                            <input id="carne-radio" type="radio" value="carne" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <input id="carne-radio" type="radio" value="carne" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500" required>
                             <label for="carne-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Carnét</label>
                         </div>
                         <div class="flex items-center me-4">
-                            <input id="pasaporte-radio" type="radio" value="pasaporte" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                            <input id="pasaporte-radio" type="radio" value="pasaporte" name="tipo-doc" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500" required>
                             <label for="pasaporte-radio" class="ms-2 text-sm font-medium text-[#949BA6]">Pasaporte</label>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                 <!-- Sucursal del Reportado -->
                 <div class="mb-5">
                     <label for="sucursales" class="block mb-2 text-sm font-medium text-[#0F2343]">Sucursal por Reportar</label>
-                    <select id="sucursales" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <select id="sucursales" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
                         <option selected disabled>Seleccionar Sucursal---</option>
                         <option value="sucursal1">Sucursal 1</option>
                         <option value="sucursal2">Sucursal 2</option>
@@ -69,7 +69,7 @@
                 <!-- Area del Reportado -->
                 <div class="mb-5">
                     <label for="areas" class="block mb-2 text-sm font-medium text-[#0F2343]">Área por Reportar</label>
-                    <select id="areas" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <select id="areas" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
                         <option selected disabled>Seleccionar Área---</option>
                         <option value="area1">Área 1</option>
                         <option value="area2">Área 2</option>
@@ -78,7 +78,7 @@
                 <!-- Empleado Reportado -->
                 <div class="mb-5">
                     <label for="empleado" class="block mb-2 text-sm font-medium text-[#0F2343]">Empleado Reportado</label>
-                    <select id="empleado" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <select id="empleado" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
                         <option selected disabled>Seleccionar Empleado---</option>
                         <option value="empleado1">Empleado 1</option>
                         <option value="empleado2">Empleado 2</option>
@@ -87,7 +87,7 @@
                 <!-- Tipo de Incidencia (real acoso) -->
                 <div class="mb-5">
                     <label for="tipo-incidencia" class="block mb-2 text-sm font-medium text-[#0F2343]">Tipo de Incidencia</label>
-                    <select id="tipo-incidencia" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <select id="tipo-incidencia" class="bg-gray-50 border border-gray-300 text-[#0F2343] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
                         <option selected disabled>Seleccionar Tipo---</option>
                         <option value="tipo1">Tipo 1</option>
                         <option value="tipo2">Tipo 2</option>
@@ -101,7 +101,7 @@
                 <!-- Evidencias fotograficas -->
                 <div class="mb-5">
                     <label for="evidencia" class="block mb-2 text-sm font-medium text-[#0F2343]">Evidencia</label>
-                    <input class="block w-full text-sm text-[#0F2343] border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" aria-describedby="user_avatar_help" id="evidencia" type="file">
+                    <input class="block w-full text-sm text-[#0F2343] border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" aria-describedby="user_avatar_help" id="evidencia" type="file" required>
                 </div>
     
                 <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Enviar</button>
