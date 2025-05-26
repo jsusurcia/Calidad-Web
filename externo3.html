@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Flatpickr para el datepicker múltiple -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Plantilla Encuestas</title>
+</head>
+<body>
+    <main class="font-[Poppins]">
+    <main class="font-[Poppins]">
+        <section class="bg-center bg-no-repeat bg-[url('https://drive.google.com/uc?export=view&id=1-Dd2szy4jRWxpEjO3xFttcPL2Yugw_u4')] bg-gray-700 bg-blend-multiply">
+            <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                <img src="https://cdn-icons-png.flaticon.com/512/4287/4287284.png" alt="SaTanca" class="w-[25%] max-w-[200px] h-auto mx-auto block"> <br>
+                <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Encuesta de Satisfacción</h1>
+                <p class="mb-8 text-lg font-normal text-[#949BA6] lg:text-xl sm:px-16 lg:px-48">Agradecemos su participación. Sus respuestas nos ayudarán a tomar mejores decisiones.</p>
+            </div>
+        </section>
+        
+        <section class="relative z-10 -mt-10 p-6 space-y-6 max-w-5xl mx-auto bg-white text-[#0F2343] rounded-t-2xl shadow-lg">
+            <h1 class="text-xl font-bold">Detalles de la Encuesta</h1>
+            <form id="formulario-encuesta" class="max-w-3xl mx-auto">
+                
+                <!-- Pregunta Si/No -->
+                <div class="mb-5">
+                    <label for="pregunta1" class="block mb-2 text-sm font-medium text-[#0F2343]">¿Recomendaría nuestros servicios?</label>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <input id="pregunta1-si" type="radio" value="si" name="pregunta1" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2">
+                            <label for="pregunta1-si" class="ms-2 text-sm font-medium text-[#0F2343]">Sí</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="pregunta1-no" type="radio" value="no" name="pregunta1" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2">
+                            <label for="pregunta1-no" class="ms-2 text-sm font-medium text-[#0F2343]">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta con Estrellas 1 -->
+                <div class="mb-5">
+                    <label for="amabilidad-value" class="block mb-2 text-sm font-medium text-[#0F2343]">¿Cómo califica la amabilidad del personal?</label>
+                    <div class="flex items-center space-x-1" data-rating-group="amabilidad">
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="1" data-group="amabilidad">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="2" data-group="amabilidad">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="3" data-group="amabilidad">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="4" data-group="amabilidad">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="5" data-group="amabilidad">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <input type="hidden" name="amabilidad" id="amabilidad-value" value="">
+                    <div class="mt-2">
+                        <span class="text-sm text-gray-500" id="amabilidad-text">Seleccione una calificación</span>
+                    </div>
+                </div>
+
+                <!-- Pregunta con Estrellas 2 -->
+                <div class="mb-5">
+                    <label for="rapidez-value" class="block mb-2 text-sm font-medium text-[#0F2343]">¿Cómo califica la rapidez del servicio?</label>
+                    <div class="flex items-center space-x-1" data-rating-group="rapidez">
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="1" data-group="rapidez">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="2" data-group="rapidez">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="3" data-group="rapidez">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="4" data-group="rapidez">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="5" data-group="rapidez">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <input type="hidden" name="rapidez" id="rapidez-value" value="">
+                    <div class="mt-2">
+                        <span class="text-sm text-gray-500" id="rapidez-text">Seleccione una calificación</span>
+                    </div>
+                </div>
+
+                <!-- Pregunta con Estrellas 3 -->
+                <div class="mb-5">
+                    <label for="calidad-value" class="block mb-2 text-sm font-medium text-[#0F2343]">¿Cómo califica la calidad de los productos?</label>
+                    <div class="flex items-center space-x-1" data-rating-group="calidad">
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="1" data-group="calidad">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="2" data-group="calidad">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="3" data-group="calidad">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="4" data-group="calidad">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="star-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors duration-150" data-rating="5" data-group="calidad">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <input type="hidden" name="calidad" id="calidad-value" value="">
+                    <div class="mt-2">
+                        <span class="text-sm text-gray-500" id="calidad-text">Seleccione una calificación</span>
+                    </div>
+                </div>
+
+                <!-- Campo de comentarios adicionales -->
+                <div class="mb-5">
+                    <label for="comentarios" class="block mb-2 text-sm font-medium text-[#0F2343]">Comentarios adicionales (opcional)</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Escriba aquí sus comentarios..."></textarea>
+                </div>
+
+                <button type="submit" class="text-white bg-[#0F2343] hover:bg-[#364153] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Enviar Encuesta</button>
+            </form>
+
+            <!-- Área para mostrar datos (solo para desarrollo) -->
+            <div class="mt-6">
+                <button type="button" onclick="mostrarDatosEncuesta()" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                    [Debug] Mostrar datos de la encuesta
+                </button>
+                <pre id="datos-encuesta" class="hidden mt-4 p-4 bg-gray-100 rounded-lg text-xs overflow-auto max-h-64"></pre>
+            </div>
+        </section>
+
+        <!-- Flowbite JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+        <!-- Enlace al archivo JS -->
+        <script src="js/externo3.js"></script>
+    </main>
+</body>
+</html>
