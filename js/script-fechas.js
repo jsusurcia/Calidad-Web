@@ -74,7 +74,7 @@ function actualizarDisplayFechas() {
 // Función para actualizar el input hidden
 function actualizarInputHidden() {
     const hiddenInput = document.getElementById('fechas-justificar-hidden');
-    hiddenInput.value = fechasSeleccionadas.join(',');
+    hiddenInput.value = fechasSeleccionadas.join(', ');
 }
             
 // Función para actualizar la validación del formulario
@@ -88,46 +88,6 @@ function actualizarValidacionFormulario() {
         inputVisible.setCustomValidity('Debe seleccionar al menos una fecha');
     }
 }
-            
-// function mostrarDatosFormulario() {
-//     const form = document.getElementById('formulario-justificacion');
-//     const formData = new FormData(form);
-    
-//     const datos = {
-//         tipoDocumento: formData.get('tipoDocumento'),
-//         numeroDocumento: formData.get('numeroDocumento'),
-//         tipoEvento: formData.get('tipoEvento'),
-//         tipoJustificacion: formData.get('tipoJustificacion'),
-//         fechaSelector: formData.get('fechaSelector'),
-//         fechasJustificar: formData.get('fechasJustificar'),
-//         fechasArray: fechasSeleccionadas,
-//         totalFechas: fechasSeleccionadas.length,
-//         detallesEscritos: formData.get('detallesEscritos'),
-//         evidenciaFotografica: formData.get('evidenciaFotografica')?.name || 'Sin archivo'
-//     };
-    
-//     const datosDiv = document.getElementById('datos-formulario');
-//     datosDiv.textContent = JSON.stringify(datos, null, 2);
-//     datosDiv.classList.toggle('hidden');
-// }
-
-// // Manejar el envío del formulario
-// document.getElementById('formulario-justificacion').addEventListener('submit', function(e) {
-//     // Validar que haya al menos una fecha seleccionada
-//     if (fechasSeleccionadas.length === 0) {
-//         e.preventDefault();
-//         alert('Por favor, selecciona al menos una fecha para justificar.');
-//         return false;
-//     }
-    
-//     // Aquí puedes agregar más validaciones o el envío al backend
-//     console.log('Formulario enviado con éxito');
-//     console.log('Fechas seleccionadas:', fechasSeleccionadas);
-    
-//     // Para desarrollo: mostrar datos antes de enviar (remover en producción)
-//     // e.preventDefault();
-//     // mostrarDatosFormulario();
-// });
 
 // Inicializar la vista
 actualizarDisplayFechas();
