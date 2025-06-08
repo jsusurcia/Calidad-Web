@@ -10,6 +10,25 @@ const textosCalificacion = {
     5: "Excelente"
 };
 
+// Inicializar el sistema de preguntas 'Si o No'
+function inicializarSiNo() {
+    const preguntasSiNo = document.querySelectorAll('input[type="radio"][name^="pregunta"]');
+
+    preguntasSiNo.forEach(input => {
+        input.addEventListener('change', function() {
+            const group = this.name;  // El nombre de la pregunta (e.g., pregunta2, pregunta3)
+            const value = this.value; // El valor de la respuesta ("si" o "no")
+            
+            // Asignar puntos según la respuesta
+            if (value === "si") {
+                calificaciones[group] = 5;
+            } else {
+                calificaciones[group] = 0;
+            }
+        });
+    });
+}
+
 // Inicializar el sistema de estrellas dinámicamente
 function inicializarEstrellas() {
     const gruposEstrella = document.querySelectorAll('[data-rating-group]');
@@ -108,7 +127,8 @@ function mostrarDatosEncuesta() {
 
 // Función para calcular el promedio de calificaciones
 function calcularPromedio() {
-    const valores = Object.values(calificaciones).filter(val => val > 0);
+    // const valores = Object.values(calificaciones).filter(val => val > 0);
+    const valores = Object.values(calificaciones);
     if (valores.length === 0) return 0;
     
     const suma = valores.reduce((acc, val) => acc + val, 0);
@@ -132,4 +152,5 @@ document.getElementById('formulario-encuesta').addEventListener('submit', functi
 // Inicializar cuando se carga la página
 document.addEventListener('DOMContentLoaded', function() {
     inicializarEstrellas();
+    inicializarSiNo();
 });
