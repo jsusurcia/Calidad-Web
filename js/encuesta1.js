@@ -118,7 +118,7 @@ function mostrarDatosEncuesta() {
     datos.calificacionesNumericas = calificaciones;
     datos.promedioCalificaciones = calcularPromedio();
     datos.totalPreguntas = Object.keys(calificaciones).length;
-    datos.preguntasRespondidas = Object.values(calificaciones).filter(val => val > 0).length;
+    datos.preguntasRespondidas = Object.values(calificaciones).length;
                 
     const datosDiv = document.getElementById('datos-encuesta');
     datosDiv.textContent = JSON.stringify(datos, null, 2);
